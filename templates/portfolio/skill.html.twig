@@ -3,5 +3,22 @@
 {% block title %}Competences{% endblock %}
 
 {% block body %}
-
+    <div class="container-fluid">
+        <h1 class="text-center my-4">Mes compétences</h1>
+        <div class="row justify-content-center">
+            {% for skill in skills %}
+                <div class="card mb-5 ml-4 align-items-center" style="width: 15rem;">
+                    <img src="uploads/{{ skill.image }}"
+                         class="card-img-top img-fluid"
+                         alt="{{ skill.title }}"
+                         style="width: 14rem;">
+                    <div class="card-body">
+                    </div>
+                </div>
+            {% else %}
+                Aucune compétence trouvée
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
+

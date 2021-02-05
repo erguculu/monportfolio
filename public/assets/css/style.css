@@ -1,14 +1,72 @@
 body{
-    width: 80%;
+    background-image: url("../images/back.jpg");
+    background-size: cover;
+    min-height: 100%;
+
 }
-.navbar-item-custom, .navbar-item-custom a{
-    color: #fff;
+#wrapper {
+    min-height: calc(100vh - 70px);
 }
+
+.YClogo {
+    height: 30px;
+    width: auto;
+}
+
+.navbar-nav > li{
+    padding-left:30px;
+    padding-right:30px;
+}
+.container-content{
+    margin: 5%;
+}
+
+.title{
+    text-align:center;
+    font-size: 4rem;
+}
+
+.presentation{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.presentation-text{
+    text-align: justify;
+    font-size: 1.5rem;
+}
+
+.index-img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: block;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto
+}
+
 .footer-custom {
     text-align: center;
-    position: fixed;
     bottom: 0;
     width: 100%;
     background-color: #dfeaff;
-    padding-top: 25px;
+    padding-top: 15px;
+    margin-top: auto;
+}
+
+#footer{
+    height: 70px;
+}
+@media screen and (max-width: 1024px) {
+    .title{
+        text-align:justify;
+        font-size: 3rem;
+    }
+
+    .container-content{
+        margin: 15%;
+    }
+
 }

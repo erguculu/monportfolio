@@ -4,9 +4,9 @@
 
 {% block body %}
 <div id="formContact">
-    <h1>Contactez-Nous</h1>
-    <hr>
-
+    <div class="text-center title">
+        <h1 class = "title">Contact</h1>
+    </div>
     {{ form_start(form) }}
         <div class="row">
             <div class="col-md-10 offset-1">{{ form_row(form.fullName) }}</div>
@@ -20,7 +20,9 @@
             <div class="col-md-5">{{ form_row(form.message) }}</div>
         </div>
         {{ form_widget(form) }}
-        <button class="btn btn-success">Envoyer</button>
+        <div class="text-center">
+            <button class="btn btn-success ">Envoyer</button>
+        </div>
     {{ form_end(form) }}
 </div>
 {% endblock %}

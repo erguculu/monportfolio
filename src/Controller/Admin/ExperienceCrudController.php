@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\Experience;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
@@ -25,6 +26,12 @@ class ExperienceCrudController extends AbstractCrudController
             DateField::new('endedAt', 'Fin'),
             TextField::new('city', 'Ville'),
             TextField::new('country', 'Pays'),
+            imageField::new('image', 'Photo') ->setBasePath('uploads')
+
+                ->setUploadDir('public/uploads')
+
+                ->setUploadedFileNamePattern('[randomhash].[extension]')
+                ->setRequired(false),
         ];
     }
 

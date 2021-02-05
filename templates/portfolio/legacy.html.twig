@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }} - <link rel = "stylesheet" href = "{{ asset('assets/css/info.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h2>Identité</h2>
+        <p>Nom du site web : YC<br>
+            Responsable de publication :Yusuf CELIK.<br>
+            Conception et réalisation : Yusuf CELIK.<br>
+    </div>
+    <div>
+        <h2>Conditions d’utilisation</h2>
+        <p>
+            L’utilisation du présent site implique l’acceptation pleine et entière
+            des conditions générales d’utilisation décrites ci-après. Ces conditions
+            d’utilisation sont susceptibles d’être modifiées ou complétées à tout moment.
+        </p>
+        <p>
+            Le propritaire de site se réserve le droit de modifier ou supprimer des questions ajoutées par les utilisateurs
+            sans justification ni notification.
+        </p>
+    </div>
+    <div>
+        <h2>Propriété intellectuelle</h2>
+        <p>
+            Sauf mention contraire, tous les éléments accessibles sur le site
+            (textes, images, graphismes, logo, icônes, sons, logiciels, etc.)
+            restent la propriété exclusive de leurs auteurs, en ce qui concerne
+            les droits de propriété intellectuelle ou les droits d’usage.
+            <sup id="fnref-7013-1"><a href="#fn-7013-1" rel="footnote">1</a></sup>
+        </p>
+    </div>
+    <div>
+        <h2>Confidentialité</h2>
+        <p>
+            Le site ne recueille pas d’informations personnelles, et n’est pas assujetti à déclaration à la CNIL.
+            <sup id="fnref-7013-4"><a href="#fn-7013-4" rel="footnote">9</a></sup>
+        </p>
+    </div>
+    <h2>Crédits</h2>
+    <p>Les crédits photos sont sur chaque photo ou absents lorsque les images sont libres de droits.</p>
+    </div>
+{% endblock %}

@@ -1,7 +1,25 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Experiences{% endblock %}
+{% block title %}Expérience{% endblock %}
 
 {% block body %}
-
+<div class="container-fluid">
+        <h1 class="text-center my-4">Mes expériences</h1>
+        <div class="row justify-content-center">
+            {% for experience in experiences %}
+                <div class="card mb-3 ml-2 align-items-center" style="width: 15rem;">
+                    <img src="uploads/{{ experience.image }}"
+                         class="card-img-top img-fluid"
+                         alt="{{ experience.title }}"
+                         style="width: 14rem;">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ experience.title }}</h2>
+                        <p>{{experience.startedAt|date("m/Y") }} - {{experience.endedAt |date("m/Y") }}</p>
+                    </div>
+                </div>
+            {% else %}
+                Aucune expérience trouvée
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}

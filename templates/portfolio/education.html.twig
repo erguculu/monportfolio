@@ -1,11 +1,12 @@
 {% extends 'base.html.twig' %}
 
+{% block title %} Education {% endblock %}
 {% block body %}
 <div class="container-fluid">
-        <h1 class="text-center my-4">Formations</h1>
+        <h1 class="text-center my-4">Mes formations</h1>
         <div class="row justify-content-center">
             {% for education in educations %}
-                <div class="card mb-3 ml-2 align-items-center" style="width: 15rem;">
+                <div class="card mb-5 ml-4 align-items-center" style="width: 15rem;">
                     <img src="uploads/{{ education.image }}"
                          class="card-img-top img-fluid"
                          alt="{{ education.title }}"

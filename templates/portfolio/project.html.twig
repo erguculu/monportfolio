@@ -1,9 +1,23 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Projects{% endblock %}
-
 {% block body %}
-
-<h1>sdfghjklmùùkj polmikm, jn:,k:!;:l;.P%ô²÷ÖÎÔ¬Îßðj k,;÷¡§.Lj ôßh n </h1>
-
+    <div class="container-fluid">
+        <h1 class="text-center my-4">Mes réalisations</h1>
+        <div class="row justify-content-center">
+            {% for project in projects %}
+                <div class="card mb-3 ml-2 align-items-center" style="width: 15rem;">
+                    <img src="uploads/{{ project.image }}"
+                         class="card-img-top img-fluid"
+                         alt="{{ project.title }}"
+                         style="width: 14rem;">
+                    <div class="card-body">
+                        <a href="{{ project.link }}" class="btn btn-primary">En savoir plus</a>
+                    </div>
+                </div>
+            {% else %}
+                Aucune expérience trouvée
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}

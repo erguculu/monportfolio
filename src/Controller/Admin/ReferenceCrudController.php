@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\Reference;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
 class ReferenceCrudController extends AbstractCrudController
@@ -21,6 +22,12 @@ class ReferenceCrudController extends AbstractCrudController
             TextField::new('title', 'Titre'),
             TextField::new('company', 'Entreprise'),
             TextEditorField::new('description', 'Description'),
+            imageField::new('image', 'Photo') ->setBasePath('uploads')
+
+                ->setUploadDir('public/uploads')
+
+                ->setUploadedFileNamePattern('[randomhash].[extension]')
+                ->setRequired(false),
         ];
     }
 
